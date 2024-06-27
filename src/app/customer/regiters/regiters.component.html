@@ -1,0 +1,28 @@
+
+<div class="login">
+    <div class="main" >
+        <form #userlogin="ngForm" (ngSubmit)="singin(userlogin)" class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center " >
+            <div class="row-gap-2">
+                <h1 class="bi bi-person-circle d-flex align-items-center justify-content-center"></h1>
+                <div class="col-10">
+                    Username:   <input type="email" name="username"  #usernames="ngModel" [(ngModel)]="username" class="form-control" required><br>
+    
+                  </div>
+                  <div class="col-10">
+                 Password:  <input type="text" name="password" #password="ngModel" [(ngModel)]="password "  class="form-control" ngModel required><br>
+                  </div>
+                  <div class="col-10">
+                    Phone Number:  <input type="text" name=" PhoneNumber" #password="ngModel" [(ngModel)]=" phonenumber"  class="form-control" ngModel required><br>
+                     </div>
+                     
+                     
+                  <div >
+                    <button class="bt btn-dark" type="submit" >Risgter</button>
+                  </div>
+                
+            </div><br>
+           
+        </form>
+    </div>
+</div>
+
