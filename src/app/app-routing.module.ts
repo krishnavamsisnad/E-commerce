@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './app/homepage/homepage.component';
+import { ProductListComponent } from './product-management/product-list/product-list.component';
+
 
 const routes: Routes = [
   {
@@ -9,7 +11,11 @@ const routes: Routes = [
   {
     
     path:'Register',loadChildren:()=>import("./customer/customer.module").then(x=>x.CustomerModule)
+  },
+  {
+    path:'products', component:ProductListComponent
   }
+  
 ];
 
 @NgModule({

@@ -6,6 +6,9 @@ const routes: Routes = [
   {
     path:"",component:RegitersComponent
   },
+  // {
+  //   path:'product-list',loadChildren:()=>import("./product-management/product-management.module.ts").then(x=>x.ProductManagementModule)
+  // }
  
 ];
 

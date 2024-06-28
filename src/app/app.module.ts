@@ -7,6 +7,8 @@ import { HomepageComponent } from './app/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { CustomerModule } from './customer/customer.module';
+import { ProductManagementModule } from './product-management/product-management.module';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,13 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    ToastrModule
-  
+    ToastrModule.forRoot({ // ToastrModule added
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
+    CustomerModule,
+    ProductManagementModule,
   
   ],
   providers: [],

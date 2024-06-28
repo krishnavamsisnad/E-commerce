@@ -10,9 +10,14 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./regiters.component.css']
 })
 export class RegitersComponent {
-  username = "";
-  password = "";  // Fixed typo from passwoard to password
-  phonenumber = "";
+  user = {
+    firstname: '',
+    lastname:'',
+    email: '',
+    password: '',
+    confirmpassword: '',
+    phonenumber: ''
+  };
 
   constructor(
     private http: HttpClient,
@@ -20,7 +25,7 @@ export class RegitersComponent {
     private toastr: ToastrService
   ) {}
 
-  singin(f: NgForm) {
+  signin(f: NgForm) {
     if (f.valid) {
       this.http.post('http://localhost:3000/singin', f.value).subscribe(
         (res) => {

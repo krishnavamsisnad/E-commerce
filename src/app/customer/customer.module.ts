@@ -5,6 +5,7 @@ import { CustomerRoutingModule } from './customer-routing.module';
 import { RegitersComponent } from './regiters/regiters.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { ProductManagementModule } from '../product-management/product-management.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ToastrModule } from 'ngx-toastr';
     CustomerRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule
+    ToastrModule,
+    ProductManagementModule
    
   ]
 })
