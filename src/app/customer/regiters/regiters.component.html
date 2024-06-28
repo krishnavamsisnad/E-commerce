@@ -1,0 +1,111 @@
+<div class="register">
+  <div class="main">
+    <form
+      #userlogin="ngForm"
+      (ngSubmit)="signin(userlogin)"
+      class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="row-gap-2">
+        <h1
+          class="bi bi-person-circle d-flex align-items-center justify-content-center"
+        ></h1>
+        <div class="col-10">
+          <label for="firstName">FirstName<span class="err-msg">*</span></label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            #firstName="ngModel"
+            [(ngModel)]="user.firstname"
+            class="form-control"
+            required
+          /><br />
+          <small *ngIf="firstName.touched && firstName.invalid" class="err-msg"
+            >FirstName is required</small
+          >
+        </div>
+
+        <div class="col-10">
+          <label for="lastName">LastName<span class="err-msg">*</span></label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            #lastName="ngModel"
+            [(ngModel)]="user.lastname"
+            class="form-control"
+            required
+          /><br />
+          <small *ngIf="lastName.touched && lastName.invalid" class="err-msg"
+            >LastName is required</small
+          >
+        </div>
+        <div class="col-10">
+          <label for="Email">Email<span class="err-msg">*</span></label>
+          <input
+            type="email"
+            id="Email"
+            name="Email"
+            #Email="ngModel"
+            [(ngModel)]="user.email"
+            class="form-control"
+            required
+          /><br />
+          <small *ngIf="Email.touched && Email.invalid" class="err-msg"
+            >Email is required</small
+          >
+        </div>
+        <div class="col-10">
+          <label for="phoneNumber"
+            >PhoneNumber<span class="err-msg">*</span></label
+          >
+          <input
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            #phoneNumber="ngModel"
+            [(ngModel)]="user.phonenumber"
+            class="form-control"
+            required
+          /><br />
+        </div>
+        <div class="col-10">
+          <label for="passWord">Password<span class="err-msg">*</span></label>
+          <input
+            type="text"
+            id="passWord"
+            name="passWord"
+            #passWord="ngModel"
+            [(ngModel)]="user.password"
+            class="form-control"
+            required
+          /><br />
+        </div>
+        <div class="col-10">
+          <label for="confirmPassWord"
+            >Confirm Password<span class="err-msg">*</span></label
+          >
+          <input
+            type="text"
+            id="confirmPassWord"
+            name="confirmPassWord"
+            #confirmPassWord="ngModel"
+            [(ngModel)]="user.confirmpassword"
+            class="form-control"
+            required
+          /><br />
+        </div>
+        <div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="userlogin.invalid"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+      <br />
+    </form>
+  </div>
+</div>
