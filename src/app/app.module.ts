@@ -7,11 +7,16 @@ import { HomepageComponent } from './app/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { CustomerModule } from './customer/customer.module';
+import { DashboardComponent } from './app/homepage/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
+    DashboardComponent,
+   
    
   ],
   imports: [
@@ -19,8 +24,14 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    CustomerModule,
     FormsModule,
-    ToastrModule
+    ToastrModule.forRoot({ // ToastrModule added
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
+  
   
   
   ],

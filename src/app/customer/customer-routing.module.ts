@@ -4,7 +4,7 @@ import { RegitersComponent } from './regiters/regiters.component';
 
 const routes: Routes = [
   {
-    path:"",component:RegitersComponent
+    path: "", component: RegitersComponent
   },
  
 ];
@@ -14,3 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class CustomerRoutingModule { }
+
