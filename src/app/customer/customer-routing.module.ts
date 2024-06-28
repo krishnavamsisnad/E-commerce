@@ -4,11 +4,8 @@ import { RegitersComponent } from './regiters/regiters.component';
 
 const routes: Routes = [
   {
-    path:"",component:RegitersComponent
+    path: "", component: RegitersComponent
   },
-  // {
-  //   path:'product-list',loadChildren:()=>import("./product-management/product-management.module.ts").then(x=>x.ProductManagementModule)
-  // }
  
 ];
 
@@ -17,3 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class CustomerRoutingModule { }
+
