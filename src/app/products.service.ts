@@ -73,4 +73,8 @@ export class ProductsService {
     return this.womanInfo;
   }
 
+  getProductById(id: string) {
+    return this.mobileInfo.find(mobile => mobile.id === id);
+  }
+
 }

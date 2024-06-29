@@ -1,4 +1,16 @@
-.login-user{
+
+.login-user {
+    width: 100%; /* Set width as needed, for example, 100% or a specific value like 500px */
+    height: 100vh; 
     background-image: url("https://img.freepik.com/free-photo/shopping-bag-cart_23-2148879372.jpg");
-    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    background-color: #f0f0f0;
+}
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
 }

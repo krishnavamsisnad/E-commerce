@@ -1,1 +1,8 @@
-<p>men works!</p>
+<h2>Men</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let m of men">
+    <img src="{{ m.image }}" />
+    <h2>{{ m.product }}</h2>
+    <p><strong>Price:</strong> ${{ m.price }}</p>
+  </div>
+</div>

@@ -45,4 +45,8 @@
 }
 .carousel-item img{
     height:600px;
+    
 }
+/* img{
+    object-fit: fill;
+} */

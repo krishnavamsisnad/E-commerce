@@ -1,0 +1,45 @@
+/* Custom styles for the navbar */
+
+/* Navbar background color */
+.navbar {
+    background-color: #007bff;
+    /* Bootstrap primary blue */
+    padding: 0.5rem 1rem;
+}
+
+/* Navbar brand and links */
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd;
+}
+
+/* Search form */
+.form-control {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.btn-outline-light {
+    border-color: #fff;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+/* Cart icon */
+.nav-link i.bi-cart {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
