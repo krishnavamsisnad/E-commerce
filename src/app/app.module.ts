@@ -12,6 +12,8 @@ import { DashboardComponent } from './app/homepage/dashboard/dashboard.component
 import { CategoryComponent } from './app/homepage/dashboard/category/category.component';
 import { AuthService } from './auth.service';
 import { ProductsService } from './products.service';
+import { SearchPipe } from './search.pipe';
+
 
 
 
@@ -20,7 +22,10 @@ import { ProductsService } from './products.service';
     AppComponent,
     HomepageComponent,
     DashboardComponent,
-    CategoryComponent
+    CategoryComponent,
+    SearchPipe,
+
+    
   
    
    
@@ -31,6 +36,7 @@ import { ProductsService } from './products.service';
     HttpClientModule,
     ReactiveFormsModule,
     CustomerModule,
+ 
     FormsModule,
     ToastrModule.forRoot({ // ToastrModule added
       timeOut: 3000,

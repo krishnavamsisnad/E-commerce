@@ -2,8 +2,19 @@
     color:red;
 }
 .main {
-    height: 100vh;
+    height: 140vh;
     display: flex;
     align-items: center; 
     justify-content: center; 
 }
+.register{
+    
+        width: 100%; 
+        height: 150vh; 
+        background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-taobao-vector-creative-technology-online-shopping-illustration-computer-finger-poster-image_131803.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+        background-color: #f0f0f0;
+    }
+
