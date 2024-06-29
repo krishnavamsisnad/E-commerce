@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/products.service';
 import { acData } from 'src/data/ac';
 
@@ -22,7 +23,7 @@ export class DashboardComponent implements OnInit {
   watch:any[]=[];
   woman:any[]=[];
 
-  constructor(private ps:ProductsService ){}
+  constructor(private ps:ProductsService,private router: Router){}
   ngOnInit(): void {
     this.ac=this.ps.getAc();
     this.book=this.ps.getBook();
@@ -36,6 +37,34 @@ export class DashboardComponent implements OnInit {
     this.watch=this.ps.getWatch();
     this.woman=this.ps.getWoman();
   }
+
+  // viewProductDetail(id: string): void {
+  //   this.router.navigate(['/mobile', id]);
+  // }
+
+  viewMobiles():void{
+    this.router.navigate(['/mobile'])
+  }
+  viewWatches():void{
+    this.router.navigate(['/watch'])
+  }
+
+  viewMen():void{
+    this.router.navigate(['/men'])
+  }
+
+  viewWoman():void{
+    this.router.navigate(['/woman'])
+  }
+
+  viewFurniture():void{
+    this.router.navigate(['/furniture'])
+  }
+
+  viewComputer():void{
+    this.router.navigate(['/computer'])
+  }
+
 
   
   

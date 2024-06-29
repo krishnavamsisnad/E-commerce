@@ -1,1 +1,8 @@
-<p>furniture works!</p>
+<h2>Furniture</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let f of furniture">
+    <img src="{{ f.image }}" />
+    <h2>{{ f.product }}</h2>
+    <p><strong>Price:</strong> ${{ f.price }}</p>
+  </div>
+</div>

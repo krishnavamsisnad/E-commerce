@@ -15,6 +15,7 @@ import { TvComponent } from './tv/tv.component';
 import { WatchComponent } from './watch/watch.component';
 import { SpeakerComponent } from './speaker/speaker.component';
 import { ProdataComponent } from './prodata/prodata.component';
+import { MobileInfoComponent } from './mobile-info/mobile-info.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ProdataComponent } from './prodata/prodata.component';
     TvComponent,
     WatchComponent,
     SpeakerComponent,
-    ProdataComponent
+    ProdataComponent,
+    MobileInfoComponent
   ],
   imports: [
     CommonModule,

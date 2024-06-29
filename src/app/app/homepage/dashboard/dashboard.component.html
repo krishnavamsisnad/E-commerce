@@ -9,7 +9,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="nav">
-        <input class="form-control me-2"  [(ngModel)]="see"    type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2"     type="search" placeholder="Search" aria-label="Search">
       </div>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
@@ -163,7 +163,7 @@
 <h2>Mobiles</h2>
 <div class="product-container">
 <h2>{{mobile.product}}</h2>
-  <div class="product-item" *ngFor="let m of mobile | search:see">
+  <div class="product-item" *ngFor="let m of mobile " (click)="viewMobiles()">
     <img src="{{ m.image }}" />
     
 
@@ -172,7 +172,7 @@
 
 <h2>Watches</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let w of watch">
+  <div class="product-item" *ngFor="let w of watch" (click)="viewWatches()">
     <img src="{{ w.image }}" />
   </div>
 </div>
@@ -186,21 +186,25 @@
 
 <h2>Men</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let m of men">
+  <div class="product-item" *ngFor="let m of men" (click)="viewMen()">
     <img src="{{ m.image }}" />
   </div>
 </div>
 
 <h2>Woman</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let w of woman">
+  <div class="product-item" *ngFor="let w of woman" (click)="viewWoman()">
     <img src="{{ w.image }}" />
   </div>
 </div>
 
 <h2>Furniture</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let f of furniture">
+  <div
+    class="product-item"
+    *ngFor="let f of furniture"
+    (click)="viewFurniture()"
+  >
     <img src="{{ f.image }}" />
   </div>
 </div>
@@ -228,7 +232,12 @@
 
 <h2>Computers</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let c of computer">
+  <div class="product-item" *ngFor="let c of computer" (click)="viewComputer()">
     <img src="{{ c.image }}" />
   </div>
 </div>
+<<<<<<< HEAD
+=======
+<!-- <p>dashboard works!</p>
+<app-category></app-category> -->
+>>>>>>> a14772abf87093e77052562df6ef3dad8f9be4cc

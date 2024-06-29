@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductsService } from 'src/app/products.service';
 import { watchData } from 'src/data/watch'
 @Component({
   selector: 'app-watch',
@@ -7,4 +8,19 @@ import { watchData } from 'src/data/watch'
 })
 export class WatchComponent {
   watchInfo=watchData;
+
+  watch:any[]=[];
+
+  constructor(private productService: ProductsService) { }
+// private route: ActivatedRoute
+  ngOnInit(): void {
+    // const id = this.route.snapshot.paramMap.get('id');
+    // if (id) {
+    //   this.watch = this.productService.getProductById(id);
+    //   console.log(this.watch)
+    // }
+
+    this.watch=this.productService.getWatch()
+
+  }
 }

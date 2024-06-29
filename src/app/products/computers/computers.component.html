@@ -1,1 +1,8 @@
-<p>computers works!</p>
+<h2>Computers</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let c of computer">
+    <img src="{{ c.image }}" />
+    <h2>{{ c.product }}</h2>
+    <p><strong>Price:</strong> ${{ c.price }}</p>
+  </div>
+</div>
