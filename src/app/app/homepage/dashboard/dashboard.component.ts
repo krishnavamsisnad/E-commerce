@@ -9,7 +9,7 @@ import { acData } from 'src/data/ac';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+   see=""
   // acInfo=acData;
   ac:any[]=[];
   book:any[]=[];
@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   furniture:any[]=[];
   kitchen:any[]=[];
   men:any[]=[];
-  mobile:any[]=[];
+  mobile:any;
   tv:any[]=[];
   watch:any[]=[];
   woman:any[]=[];

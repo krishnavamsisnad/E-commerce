@@ -9,8 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { CustomerModule } from './customer/customer.module';
 import { DashboardComponent } from './app/homepage/dashboard/dashboard.component';
+import { CategoryComponent } from './app/homepage/dashboard/category/category.component';
 import { AuthService } from './auth.service';
 import { ProductsService } from './products.service';
+import { SearchPipe } from './search.pipe';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { CommonModule } from '@angular/common';
 import { MobilesComponent } from './products/mobiles/mobiles.component';
@@ -26,6 +28,8 @@ import { MobileInfoComponent } from './products/mobile-info/mobile-info.componen
     AppComponent,
     HomepageComponent,
     DashboardComponent,
+    CategoryComponent,
+    SearchPipe,
     ProductdetailsComponent,
     MobilesComponent,
     WatchComponent,
@@ -44,6 +48,7 @@ import { MobileInfoComponent } from './products/mobile-info/mobile-info.componen
     HttpClientModule,
     ReactiveFormsModule,
     CustomerModule,
+ 
     FormsModule,
     ToastrModule.forRoot({ // ToastrModule added
       timeOut: 3000,
