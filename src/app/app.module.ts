@@ -10,6 +10,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { CustomerModule } from './customer/customer.module';
 import { DashboardComponent } from './app/homepage/dashboard/dashboard.component';
 import { CategoryComponent } from './app/homepage/dashboard/category/category.component';
+import { AuthService } from './auth.service';
+import { ProductsService } from './products.service';
 
 
 
@@ -39,7 +41,7 @@ import { CategoryComponent } from './app/homepage/dashboard/category/category.co
   
   
   ],
-  providers: [],
+  providers: [AuthService,ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
