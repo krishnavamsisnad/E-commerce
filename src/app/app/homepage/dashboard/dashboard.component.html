@@ -1,1 +1,219 @@
-<p>dashboard works!</p>
+<div class="navbar-div">
+  <div class="navbar-subdiv">
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="/home" routerLinkActive="active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-house"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+              />
+            </svg>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+        </li>
+        <li class="nav-item">
+          <a routerLink="/cart" routerLinkActive="active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              fill="currentColor"
+              class="bi bi-cart"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+              />
+            </svg>
+            Cart
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- <div class="images">
+  <h2>Acs</h2>
+  <div class="image-container">
+    <img src="assets/Ac/2.jpg" />
+    <img src="assets/Ac/3.jpg" />
+    <img src="assets/Ac/4.jpg" />
+    <img src="assets/Ac/5.jpg" />
+    <img src="assets/Ac/6.jpg" />
+    <img src="assets/Ac/7.jpg" />
+  </div>
+</div>
+
+<div class="images">
+  <h2>Books</h2>
+  <div class="image-container">
+    <img src="assets/Books/2.jpg" />
+    <img src="assets/Books/3.jpg" />
+    <img src="assets/Books/4.jpg" />
+    <img src="assets/Books/5.jpg" />
+    <img src="assets/Books/6.jpg" />
+    <img src="assets/Books/7.jpg" />
+  </div>
+</div>
+
+<div class="images">
+  <h2>Computers</h2>
+  <div class="image-container">
+    <img src="assets/Computers/2.jpg" />
+    <img src="assets/Computers/3.jpg" />
+    <img src="assets/Computers/4.jpg" />
+    <img src="assets/Computers/5.jpg" />
+    <img src="assets/Computers/6.jpg" />
+    <img src="assets/Computers/7.jpg" />
+  </div>
+</div>
+
+<div class="images">
+  <h2>Fridges</h2>
+  <div class="image-container">
+    <img src="assets/fridge/2.jpg" />
+    <img src="assets/fridge/3.jpg" />
+    <img src="assets/fridge/4.jpg" />
+    <img src="assets/fridge/5.jpg" />
+    <img src="assets/fridge/6.jpg" />
+    <img src="assets/fridge/7.jpg" />
+  </div>
+</div>
+
+<div *ngFor="let item of acInfo">
+  <P>{{ item.id }}</P>
+  <P>{{ item.product }}</P>
+  <img src={{item.image}}></img>
+  <P>{{ item.company }}</P>
+</div> -->
+
+<div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://png.pngtree.com/png-vector/20200820/ourlarge/pngtree-sale-banner-template-background-big-sale-special-offer-end-of-season-png-image_2330736.jpg"
+        class="d-block w-100"
+        alt="Image 1"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://www.creativehatti.com/wp-content/uploads/edd/2020/12/02Flat-big-sale-offer-banner-design-large-thumbnail.jpg"
+        class="d-block w-100"
+        alt="Image 2"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://i.pinimg.com/564x/84/bc/18/84bc18cfffe3dd503077d9fb799096ff.jpg"
+        class="d-block w-100"
+        alt="Image 3"
+      />
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#productCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#productCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<h2>Mobiles</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let m of mobile">
+    <img src="{{ m.image }}" />
+  </div>
+</div>
+
+<h2>Watches</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let w of watch">
+    <img src="{{ w.image }}" />
+  </div>
+</div>
+
+<h2>Books</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let b of book">
+    <img src="{{ b.image }}" />
+  </div>
+</div>
+
+<h2>Men</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let m of men">
+    <img src="{{ m.image }}" />
+  </div>
+</div>
+
+<h2>Woman</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let w of woman">
+    <img src="{{ w.image }}" />
+  </div>
+</div>
+
+<h2>Furniture</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let f of furniture">
+    <img src="{{ f.image }}" />
+  </div>
+</div>
+
+<h2>Kitchen</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let k of kitchen">
+    <img src="{{ k.image }}" />
+  </div>
+</div>
+
+<h2>Fridge</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let f of fridge">
+    <img src="{{ f.image }}" />
+  </div>
+</div>
+
+<h2>Tvs</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let t of tv">
+    <img src="{{ t.image }}" />
+  </div>
+</div>
+
+<h2>Computers</h2>
+<div class="product-container">
+  <div class="product-item" *ngFor="let c of computer">
+    <img src="{{ c.image }}" />
+  </div>
+</div>

@@ -9,6 +9,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { CustomerModule } from './customer/customer.module';
 import { DashboardComponent } from './app/homepage/dashboard/dashboard.component';
+import { AuthService } from './auth.service';
+import { ProductsService } from './products.service';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
 @NgModule({
@@ -16,6 +19,7 @@ import { DashboardComponent } from './app/homepage/dashboard/dashboard.component
     AppComponent,
     HomepageComponent,
     DashboardComponent,
+    ProductdetailsComponent,
    
    
   ],
@@ -35,7 +39,7 @@ import { DashboardComponent } from './app/homepage/dashboard/dashboard.component
   
   
   ],
-  providers: [],
+  providers: [AuthService,ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
