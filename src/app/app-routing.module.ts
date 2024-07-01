@@ -3,21 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './app/homepage/homepage.component';
 import { DashboardComponent } from './app/homepage/dashboard/dashboard.component';
 
-
-
 const routes: Routes = [
   {
-    path:"",component:HomepageComponent
+    path: "", component: HomepageComponent
   },
   {
-    path:"dashboard",component:DashboardComponent
+    path: "dashboard", component: DashboardComponent
   },
   {
-    
-    path:'Register',loadChildren:()=>import("./customer/customer.module").then(x=>x.CustomerModule)
-  },
-
-  
+    path: 'Register', loadChildren: () => import("./customer/customer.module").then(x => x.CustomerModule)
+  }
 ];
 
 @NgModule({
