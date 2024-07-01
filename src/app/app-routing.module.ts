@@ -10,6 +10,9 @@ import { WomanComponent } from './products/woman/woman.component';
 import { FurnitureComponent } from './products/furniture/furniture.component';
 import { ComputersComponent } from './products/computers/computers.component';
 import { MobileInfoComponent } from './products/mobile-info/mobile-info.component';
+import { BuynowComponent } from './addtocart/buynow/buynow.component';
+// import { RegitersComponent } from './customer/regiters/regiters.component';
+import { CartComponent } from './addtocart/cart/cart.component';
 
 
 
@@ -20,9 +23,16 @@ const routes: Routes = [
   {
     path:"dashboard",component:DashboardComponent
   },
+  // {
+  //   path:"register",component:RegitersComponent
+  // },
   {
     
     path:'Register',loadChildren:()=>import("./customer/customer.module").then(x=>x.CustomerModule)
+  },
+  {
+    
+    path:'orders',loadChildren:()=>import("./orders/orders.module").then(x=>x.OrdersModule)
   },
   // { path: 'mobile/:id', component: MobilesComponent },
   {
@@ -44,7 +54,13 @@ const routes: Routes = [
     path:'computer', component:ComputersComponent
   },
   {
-    path:'mobileinfo', component:MobileInfoComponent
+    path:'mobileinfo/:id', component:MobileInfoComponent
+  },
+  {
+    path:'buy', component:BuynowComponent
+  },
+  {
+    path:'cart', component:CartComponent
   }
   
 ];

@@ -37,7 +37,7 @@ export class MobilesComponent implements OnInit{
     console.log('Search query:', this.searchQuery);
   }
 
-  viewMobileInfo():void{
-    this.router.navigate(['/mobileinfo'])
+  viewMobileInfo(id:string):void{
+    this.router.navigate(['/mobileinfo', id ])
   }
 }

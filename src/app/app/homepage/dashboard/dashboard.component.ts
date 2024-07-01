@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   furniture:any[]=[];
   kitchen:any[]=[];
   men:any[]=[];
-  mobile:any;
+  mobile:any[]=[];
   tv:any[]=[];
   watch:any[]=[];
   woman:any[]=[];
@@ -63,6 +63,18 @@ export class DashboardComponent implements OnInit {
 
   viewComputer():void{
     this.router.navigate(['/computer'])
+  }
+
+  navigateToRegistrationForm(){
+    this.router.navigate(['/Register'])
+  }
+
+  navigateToOrders(){
+    this.router.navigate(['/orders'])
+  }
+
+  navigateToCart(){
+    this.router.navigate(['/cart'])
   }
 
 

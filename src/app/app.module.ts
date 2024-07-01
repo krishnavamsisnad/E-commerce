@@ -22,6 +22,11 @@ import { WomanComponent } from './products/woman/woman.component';
 import { FurnitureComponent } from './products/furniture/furniture.component';
 import { ComputersComponent } from './products/computers/computers.component';
 import { MobileInfoComponent } from './products/mobile-info/mobile-info.component';
+import { CartService } from './cart.service';
+import { BuynowComponent } from './addtocart/buynow/buynow.component';
+// import { OrdersModule } from './orders/orders.module';
+// import { MyordersComponent } from './orders/myorders/myorders.component';
+import { CartComponent } from './addtocart/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,10 @@ import { MobileInfoComponent } from './products/mobile-info/mobile-info.componen
     WomanComponent,
     FurnitureComponent,
     ComputersComponent,
-    MobileInfoComponent
+    MobileInfoComponent,
+    BuynowComponent,
+    // MyordersComponent,
+    CartComponent
 
    
    
@@ -55,12 +63,13 @@ import { MobileInfoComponent } from './products/mobile-info/mobile-info.componen
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
-    CommonModule
+    CommonModule,
+    // OrdersModule
   
   
   
   ],
-  providers: [AuthService,ProductsService],
+  providers: [AuthService,ProductsService,CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

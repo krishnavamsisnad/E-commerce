@@ -43,5 +43,9 @@ export class RegitersComponent {
       this.toastr.warning('Please fill out all fields correctly', 'Warning');
     }
   }
+
+  navigateToLogin(){
+    this.router.navigate(['/'])
+  }
 }
 

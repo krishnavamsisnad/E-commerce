@@ -60,7 +60,7 @@
 
 <h2>Mobiles</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let m of mobile" (click)="viewMobileInfo()">
+  <div class="product-item" *ngFor="let m of mobile" (click)="viewMobileInfo(m.id)">
     <img src="{{ m.image }}" />
     <h2>{{ m.company }}</h2>
     <p><strong>Price:</strong> ${{ m.price }}</p>
