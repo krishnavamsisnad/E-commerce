@@ -9,7 +9,7 @@ import { menData } from 'src/data/men';
 })
 export class MenComponent {
   menInfo=menData;
-
+    see=''
   men:any[]=[];
 
   constructor(private productService: ProductsService, private router:Router) { }
@@ -23,6 +23,20 @@ export class MenComponent {
 
     this.men=this.productService.getMen()
 
+  }
+  sortByPriceAsc = false;
+  sortByPriceDesc = false;
+
+  sortPriceAsc() {
+    this.men.sort((a, b) => a.price - b.price);
+    this.sortByPriceAsc = true;
+    this.sortByPriceDesc = false;
+  }
+
+  sortPriceDesc() {
+    this.men.sort((a, b) => b.price - a.price);
+    this.sortByPriceAsc = false;
+    this.sortByPriceDesc = true;
   }
 
   viewMenwearInfo(id:string){
