@@ -38,5 +38,9 @@ export class ComputerinfoComponent implements OnInit {
     this.router.navigate(['/buy'])
   }
 
+  addtoCart() {
+    this.cs.addToCart(this.computerData);
+  }
+
   
 }

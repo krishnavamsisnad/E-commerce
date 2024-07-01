@@ -46,6 +46,7 @@ export class MobileInfoComponent implements OnInit {
 
   buyNow(){
     this.router.navigate(['/buy'])
+  
   }
 
   addtoCart() {

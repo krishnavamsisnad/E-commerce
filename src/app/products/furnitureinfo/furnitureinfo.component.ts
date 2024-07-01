@@ -38,4 +38,8 @@ export class FurnitureinfoComponent {
     this.router.navigate(['/buy'])
   }
 
+  addtoCart() {
+    this.cs.addToCart(this.furnitureData);
+  }
+
 }

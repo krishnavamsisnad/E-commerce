@@ -1,12 +1,29 @@
 <!-- <h1>Currently you do not have any items in the cart</h1>
 add-to-cart.component.html -->
-<div *ngFor="let item of cartItems">
+<!-- <div *ngFor="let item of cartItems">
+  <img src="{{ item.image }}" />
   <h2>{{ item.product }}</h2>
   <p><strong>Company:</strong> {{ item.company }}</p>
   <p><strong>Model:</strong> {{ item.model }}</p>
   <p><strong>Price:</strong> ${{ item.price }}</p>
   <p><strong>Category:</strong> {{ item.category }}</p>
   <p><strong>Description:</strong>{{ item.description }}</p>
-  <button class="btn btn-success">Buy Now</button>
-  <!-- (click)="buyNow()" -->
+  <button class="btn btn-success" (click)="buyNow()">Buy Now</button>
+</div> -->
+
+<div
+  class="card"
+  style="width: 18rem; margin-top: 50px; margin-left: 50px"
+  *ngFor="let item of cartItems"
+>
+  <img class="card-img-top" src="{{ item.image }}" alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">{{ item.product }}</h5>
+    <p><strong>Model:</strong> {{ item.model }}</p>
+    <p><strong>Price:</strong> ${{ item.price }}</p>
+    <p><strong>Category:</strong> {{ item.category }}</p>
+    <p><strong>Company:</strong> {{ item.company }}</p>
+    <p class="card-text">{{ item.description }}</p>
+    <button class="btn btn-success" (click)="buyNow()">Buy Now</button>
+  </div>
 </div>

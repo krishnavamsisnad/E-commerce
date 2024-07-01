@@ -23,10 +23,10 @@ import { WatchinfoComponent } from './products/watchinfo/watchinfo.component';
 
 const routes: Routes = [
   {
-    path:"",component:HomepageComponent
+    path:"",component:DashboardComponent
   },
   {
-    path:"dashboard",component:DashboardComponent
+    path:"login",component:HomepageComponent
   },
   // {
   //   path:"register",component:RegitersComponent

@@ -21,7 +21,7 @@ export class BuynowComponent {
   }
 
   continueShopping(){
-    this.router.navigate(['/dashboard'])
+    this.router.navigate(['/'])
   }
 
   // showModal() {

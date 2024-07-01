@@ -77,6 +77,10 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/cart'])
   }
 
+  navigateToLoginPage(){
+    this.router.navigate(['/login'])
+  }
+
 
   
   

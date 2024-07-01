@@ -38,4 +38,8 @@ export class FashionwomaninfoComponent {
     this.router.navigate(['/buy'])
   }
 
+  addtoCart() {
+    this.cs.addToCart(this.fashionWomanData);
+  }
+
 }

@@ -1,29 +1,50 @@
 <div class="login-user">
-    <div class="main">
-      
-        <form #userlogin="ngForm" (ngSubmit)="login(userlogin)" class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center">
-            <div class="row-gap-2">
-                <h1 class="bi bi-person-circle d-flex align-items-center justify-content-center"></h1>
-                <div class="col-10">
-                    <label for="username">Username:</label>
-                    <input type="email" id="username" name="username" [(ngModel)]="username" class="form-control" required>
-                </div>
-                <br>
-                <div class="col-10">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control" required>
-                </div>
-                <br>
-                <div class="col-13">
-                    <button class="btn btn-dark" type="submit" (click)="navigateToDashboard()">Login</button>&nbsp; <a routerLink="Register">Click to new user?</a>
-                </div>
-                <br>
-                <div class="col-10">
-                  
-                </div>
-            </div>
-        </form>
-    </div>
+  <div class="main">
+    <form
+      #userlogin="ngForm"
+      (ngSubmit)="login(userlogin)"
+      class="shadow-lg w-50 h-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="row-gap-2">
+        <h1
+          class="bi bi-person-circle d-flex align-items-center justify-content-center"
+        ></h1>
+        <div class="col-10">
+          <label for="username">Username:</label>
+          <input
+            type="email"
+            id="username"
+            name="username"
+            [(ngModel)]="username"
+            class="form-control"
+            required
+          />
+        </div>
+        <br />
+        <div class="col-10">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="password"
+            class="form-control"
+            required
+          />
+        </div>
+        <br />
+        <div class="col-13">
+          <button
+            class="btn btn-dark"
+            type="submit"
+            (click)="navigateToDashboard()"
+          >
+            Login</button
+          >&nbsp; <a routerLink="/Register">Click to new user?</a>
+        </div>
+        <br />
+        <div class="col-10"></div>
+      </div>
+    </form>
+  </div>
 </div>
-
-

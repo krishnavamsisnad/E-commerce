@@ -52,16 +52,27 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li>
-              <a class="dropdown-item text-dark" routerLink=""
+              <a class="dropdown-item text-dark" routerLink="login"
                 ><b class="bi bi-person-circle">UserLogin</b></a
               >
             </li>
             <li>
-              <a class="dropdown-item text-dark" (click)="navigateToRegistrationForm()" 
+              <a
+                class="dropdown-item text-dark"
+                (click)="navigateToRegistrationForm()"
                 >New User</a
               >
             </li>
-            <li><a class="dropdown-item text-dark" (click)="navigateToOrders()">Your Orders</a></li>
+            <li>
+              <a class="dropdown-item text-dark" (click)="navigateToOrders()"
+                >Your Orders</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item text-dark" (click)="navigateToLoginPage()"
+                >LogOut</a
+              >
+            </li>
           </ul>
         </li>
       </ul>
@@ -85,7 +96,7 @@
         src="https://rukminim2.flixcart.com/flap/64/64/image/69c6589653afdb9a.png?q=100"
         alt=""
       />
-      <h5>Electroics</h5>
+      <h5>Electronics</h5>
     </div>
     <div (click)="viewFurniture()">
       <img
@@ -285,4 +296,8 @@
     <img src="{{ c.image }}" />
   </div>
 </div>
->>>>>>>>> Temporary merge branch 2
+<!-- <<<<<<< HEAD <<<<<<< HEAD ======= -->
+<!-- <p>dashboard works!</p>
+<app-category></app-category> -->
+<!-- >>>>>>> a14772abf87093e77052562df6ef3dad8f9be4cc ======= >>>>>>>>> Temporary
+merge branch 2 >>>>>>> 6d3ef681794a685e266fe04ebea6e0c531e1f10e -->
