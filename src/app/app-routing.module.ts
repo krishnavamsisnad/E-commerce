@@ -13,6 +13,11 @@ import { MobileInfoComponent } from './products/mobile-info/mobile-info.componen
 import { BuynowComponent } from './addtocart/buynow/buynow.component';
 // import { RegitersComponent } from './customer/regiters/regiters.component';
 import { CartComponent } from './addtocart/cart/cart.component';
+import { ComputerinfoComponent } from './products/computerinfo/computerinfo.component';
+import { FurnitureinfoComponent } from './products/furnitureinfo/furnitureinfo.component';
+import { FashioninfoComponent } from './products/fashioninfo/fashioninfo.component';
+import { FashionwomaninfoComponent } from './products/fashionwomaninfo/fashionwomaninfo.component';
+import { WatchinfoComponent } from './products/watchinfo/watchinfo.component';
 
 
 
@@ -61,8 +66,22 @@ const routes: Routes = [
   },
   {
     path:'cart', component:CartComponent
-  }
-  
+  },
+  {
+    path:'computerinfo/:id', component:ComputerinfoComponent
+  },
+  {
+    path:'furnitureinfo/:id', component:FurnitureinfoComponent
+  },
+  {
+    path:'fashioninfo/:id', component:FashioninfoComponent
+  },
+  {
+    path:'fashionwomaninfo/:id', component:FashionwomaninfoComponent
+  },
+  {
+    path:'watchinfo/:id', component:WatchinfoComponent
+  },
 ];
 
 @NgModule({

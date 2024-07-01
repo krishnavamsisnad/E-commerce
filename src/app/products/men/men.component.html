@@ -1,8 +1,13 @@
+<app-navbar></app-navbar>
 <h2>Men</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let m of men">
+  <div
+    class="product-item"
+    *ngFor="let m of men"
+    (click)="viewMenwearInfo(m.id)"
+  >
     <img src="{{ m.image }}" />
-    <h2>{{ m.product }}</h2>
+    <h2>{{ m.type }}</h2>
     <p><strong>Price:</strong> ${{ m.price }}</p>
   </div>
 </div>

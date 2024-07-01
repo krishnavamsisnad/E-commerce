@@ -4,12 +4,13 @@ import { CartService } from 'src/app/cart.service';
 import { ProductsService } from 'src/app/products.service';
 
 @Component({
-  selector: 'app-mobile-info',
-  templateUrl: './mobile-info.component.html',
-  styleUrls: ['./mobile-info.component.css']
+  selector: 'app-computerinfo',
+  templateUrl: './computerinfo.component.html',
+  styleUrls: ['./computerinfo.component.css']
 })
-export class MobileInfoComponent implements OnInit {
-  mobileData:any;
+export class ComputerinfoComponent implements OnInit {
+
+  computerData:any;
 
   constructor(private productService: ProductsService, private route:ActivatedRoute, private cs:CartService,
     private router:Router
@@ -17,22 +18,11 @@ export class MobileInfoComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      this.mobileData = this.productService.getMobileById(id);
-      console.log(this.mobileData)
-    } else {
-      console.error('No ID found in the route'); // Debugging log
+      this.computerData = this.productService.getComputerById(id);
     }
   }
 
   searchQuery: string = '';
-
-  // sortPrice(order: string): void {
-  //   if (order === 'highToLow') {
-  //     // Implement sorting logic for high to low
-  //   } else if (order === 'lowToHigh') {
-  //     // Implement sorting logic for low to high
-  //   }
-  // }
 
   search(event: Event): void {
     event.preventDefault();
@@ -48,10 +38,5 @@ export class MobileInfoComponent implements OnInit {
     this.router.navigate(['/buy'])
   }
 
-  addtoCart() {
-    this.cs.addToCart(this.mobileData);
-  }
-
-
-
+  
 }

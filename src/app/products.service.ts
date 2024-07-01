@@ -77,4 +77,26 @@ export class ProductsService {
     return this.mobileInfo.find(mobile => mobile.id === id);
   }
 
+  getComputerById(id: string) {
+    return this.computerInfo.find(computer => computer.id === id);
+  }
+
+  getFurnitureById(id: string) {
+    return this.furnitureInfo.find(furniture => furniture.id === id);
+  }
+
+  getFashionById(id: string) {
+    return this.menInfo.find(men => men.id === id);
+    // return this.womanInfo.find(woman => woman.id === id);
+  }
+
+  getFashionWomanById(id: string) {
+    // return this.menInfo.find(men => men.id === id);
+    return this.womanInfo.find(woman => woman.id === id);
+  }
+
+  getWatchById(id: string) {
+    return this.watchInfo.find(watch => watch.id === id);
+  }
+
 }

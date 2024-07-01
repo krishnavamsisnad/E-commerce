@@ -1,0 +1,33 @@
+.computer-detail {
+    display: flex;
+    /* margin:200px 200px;
+    height:500px;
+    width:1000px;
+    border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.computer-info {
+    margin-top: 200px;
+}
+
+.computer-img {
+    height: 100px;
+}
+
+.vertical-line {
+    border-left: 2px solid black;
+    /* Adjust thickness and color */
+    height: 300px;
+    /* Adjust height */
+    margin: 0 10px;
+    /* Optional: Add margin around the line */
+    margin-top: 200px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}

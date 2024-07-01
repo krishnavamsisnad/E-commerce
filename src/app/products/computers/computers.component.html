@@ -1,8 +1,13 @@
+<app-navbar></app-navbar>
 <h2>Computers</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let c of computer">
+  <div
+    class="product-item"
+    *ngFor="let c of computer"
+    (click)="viewComputersInfo(c.id)"
+  >
     <img src="{{ c.image }}" />
-    <h2>{{ c.product }}</h2>
+    <h2>{{ c.company }}</h2>
     <p><strong>Price:</strong> ${{ c.price }}</p>
   </div>
 </div>

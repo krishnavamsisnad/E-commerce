@@ -1,8 +1,12 @@
 <h2>Women</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let w of woman">
+  <div
+    class="product-item"
+    *ngFor="let w of woman"
+    (click)="viewWomanwearInfo(w.id)"
+  >
     <img src="{{ w.image }}" />
-    <h2>{{ w.product }}</h2>
+    <h2>{{ w.type }}</h2>
     <p><strong>Price:</strong> ${{ w.price }}</p>
   </div>
 </div>

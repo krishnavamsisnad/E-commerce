@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/products.service';
 import { computerData } from 'src/data/computers';
 @Component({
@@ -11,7 +12,7 @@ export class ComputersComponent {
 
   computer:any[]=[];
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService, private router:Router) { }
 // private route: ActivatedRoute
   ngOnInit(): void {
     // const id = this.route.snapshot.paramMap.get('id');
@@ -22,5 +23,9 @@ export class ComputersComponent {
 
     this.computer=this.productService.getComputer()
 
+  }
+
+  viewComputersInfo(id:string){
+    this.router.navigate(['/computerinfo', id])
   }
 }
