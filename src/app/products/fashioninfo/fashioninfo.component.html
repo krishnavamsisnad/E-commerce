@@ -62,6 +62,13 @@
       <!-- <button class="btn btn-secondary">Wishlist</button> -->
       <!-- (click)="onAddToCart()" -->
       <button class="btn btn-primary" (click)="addtoCart()">Add To Cart</button>
+      <button class="btn btn-primary">
+        Add To Cart
+        <span
+          ><button (click)="inc()">+</button><b>{{ counter }}</b
+          ><button (click)="dec()">-</button></span
+        >
+      </button>
       <button class="btn btn-success" (click)="buyNow()">Buy Now</button>
     </div>
   </div>

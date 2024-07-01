@@ -11,6 +11,8 @@ import { ProductsService } from 'src/app/products.service';
 export class FurnitureinfoComponent {
 
   furnitureData:any;
+  counter:any;
+  num=1
 
   constructor(private productService: ProductsService, private route:ActivatedRoute, private cs:CartService,
     private router:Router
@@ -34,6 +36,14 @@ export class FurnitureinfoComponent {
   //   this.cs.addToCart();
   // }
 
+
+
+  inc(){
+    this.counter=this.num++
+  }
+  dec(){
+    this.counter=this.num--
+  }
   buyNow(){
     this.router.navigate(['/buy'])
   }

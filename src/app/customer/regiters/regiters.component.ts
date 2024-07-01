@@ -27,7 +27,7 @@ export class RegitersComponent {
 
   signin(f: NgForm) {
     if (f.valid) {
-      this.http.post('http://localhost:3000/singin', f.value).subscribe(
+      this.http.post('https://localhost:7291/api/Customers', f.value).subscribe(
         (res) => {
           console.log(res);
           this.toastr.success('Registration successful', 'Success');

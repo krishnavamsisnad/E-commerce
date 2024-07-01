@@ -57,9 +57,11 @@
     <p><strong>Price:</strong> ${{ mobileData.price }}</p>
     <p><strong>Category:</strong> {{ mobileData.category }}</p>
     <p><strong>Description:</strong>{{ mobileData.description }}</p>
+    
     <div class="buttons">
       <!-- <button class="btn btn-secondary">Wishlist</button> -->
-      <button class="btn btn-primary" (click)="addtoCart()">Add To Cart</button>
+      <button class="btn btn-primary" (click)="addtoCart()">Add To Cart   <span><button (click)="inc()">+</button><b>{{counter}}</b><button (click)="dec()">-</button></span><br></button>
+    
       <button class="btn btn-success" (click)="buyNow()">Buy Now</button>
     </div>
   </div>

@@ -9,7 +9,7 @@ import { furnitureData } from 'src/data/furniture';
 })
 export class FurnitureComponent {
   furnitureInfo=furnitureData;
-
+  see=""
   furniture:any[]=[];
 
   constructor(private productService: ProductsService,private router:Router) { }
@@ -23,6 +23,20 @@ export class FurnitureComponent {
 
     this.furniture=this.productService.getFurniture()
 
+  }
+  sortByPriceAsc = false;
+  sortByPriceDesc = false;
+
+  sortPriceAsc() {
+    this.furniture.sort((a, b) => a.price - b.price);
+    this.sortByPriceAsc = true;
+    this.sortByPriceDesc = false;
+  }
+
+  sortPriceDesc() {
+    this.furniture.sort((a, b) => b.price - a.price);
+    this.sortByPriceAsc = false;
+    this.sortByPriceDesc = true;
   }
 
   viewFurnitureInfo(id:string){

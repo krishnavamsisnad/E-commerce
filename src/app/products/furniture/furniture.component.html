@@ -1,9 +1,55 @@
-<app-navbar></app-navbar>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" routerLink="/">MyStore</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="sortPriceDesc()"
+            >Price High to Low</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="sortPriceAsc()"
+            >Price Low to High</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex" >
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          [(ngModel)]="see"
+          name="search"
+        />
+        <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
+      </form>
+      <a class="nav-link text-light" routerLink="/cart">
+        <i class="bi bi-cart"></i> Cart
+      </a>
+    </div>
+  </div>
+</nav>
 <h2>Furniture</h2>
 <div class="product-container">
   <div
     class="product-item"
-    *ngFor="let f of furniture"
+    *ngFor="let f of furniture |search:see"
     (click)="viewFurnitureInfo(f.id)"
   >
     <img src="{{ f.image }}" />

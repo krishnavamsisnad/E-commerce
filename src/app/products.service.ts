@@ -14,6 +14,9 @@ import { womanData } from 'src/data/woman';
   providedIn: 'root'
 })
 export class ProductsService {
+    
+  apiurl="https://localhost:7291/api/Categories";
+  address="https://localhost:7291/api/Address";
 
   constructor() { }
 

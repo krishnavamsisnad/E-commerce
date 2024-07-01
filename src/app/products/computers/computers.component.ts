@@ -11,6 +11,7 @@ export class ComputersComponent {
   computerInfo=computerData;
 
   computer:any[]=[];
+  see="";
 
   constructor(private productService: ProductsService, private router:Router) { }
 // private route: ActivatedRoute
@@ -27,5 +28,20 @@ export class ComputersComponent {
 
   viewComputersInfo(id:string){
     this.router.navigate(['/computerinfo', id])
+  }
+
+  sortByPriceAsc = false;
+  sortByPriceDesc = false;
+
+  sortPriceAsc() {
+    this.computer.sort((a, b) => a.price - b.price);
+    this.sortByPriceAsc = true;
+    this.sortByPriceDesc = false;
+  }
+
+  sortPriceDesc() {
+    this.computer.sort((a, b) => b.price - a.price);
+    this.sortByPriceAsc = false;
+    this.sortByPriceDesc = true;
   }
 }

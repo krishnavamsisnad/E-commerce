@@ -9,7 +9,7 @@ import { watchData } from 'src/data/watch'
 })
 export class WatchComponent {
   watchInfo=watchData;
-
+  see=""
   watch:any[]=[];
 
   constructor(private productService: ProductsService, private router:Router) { }
@@ -24,6 +24,21 @@ export class WatchComponent {
     this.watch=this.productService.getWatch()
 
   }
+  sortByPriceAsc = false;
+  sortByPriceDesc = false;
+
+  sortPriceAsc() {
+    this.watch.sort((a, b) => a.price - b.price);
+    this.sortByPriceAsc = true;
+    this.sortByPriceDesc = false;
+  }
+
+  sortPriceDesc() {
+    this.watch.sort((a, b) => b.price - a.price);
+    this.sortByPriceAsc = false;
+    this.sortByPriceDesc = true;
+  }
+
   viewWatchInfo(id:string){
     this.router.navigate(['/watchinfo', id])
   }
