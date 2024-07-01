@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/products.service';
 import { furnitureData } from 'src/data/furniture';
 @Component({
@@ -11,7 +12,7 @@ export class FurnitureComponent {
 
   furniture:any[]=[];
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService,private router:Router) { }
 // private route: ActivatedRoute
   ngOnInit(): void {
     // const id = this.route.snapshot.paramMap.get('id');
@@ -22,5 +23,9 @@ export class FurnitureComponent {
 
     this.furniture=this.productService.getFurniture()
 
+  }
+
+  viewFurnitureInfo(id:string){
+    this.router.navigate(['/furnitureinfo', id]);
   }
 }

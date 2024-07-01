@@ -10,7 +10,8 @@ import { ProductsService } from 'src/app/products.service';
 })
 export class MobileInfoComponent implements OnInit {
   mobileData:any;
-
+  counter=0
+  num=1
   constructor(private productService: ProductsService, private route:ActivatedRoute, private cs:CartService,
     private router:Router
   ) { }
@@ -25,6 +26,12 @@ export class MobileInfoComponent implements OnInit {
   }
 
   searchQuery: string = '';
+  inc(){
+    this.counter=this.num++
+  }
+  dec(){
+    this.counter=this.num--
+  }
 
   // sortPrice(order: string): void {
   //   if (order === 'highToLow') {
@@ -40,15 +47,19 @@ export class MobileInfoComponent implements OnInit {
     console.log('Search query:', this.searchQuery);
   }
 
-  onAddToCart() {
-    this.cs.addToCart();
-  }
+  // onAddToCart() {
+  //   this.cs.addToCart();
+  // }
 
   buyNow(){
     this.router.navigate(['/buy'])
   
   }
-  
+
+  addtoCart() {
+    this.cs.addToCart(this.mobileData);
+  }
+
 
 
 }

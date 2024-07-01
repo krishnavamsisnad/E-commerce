@@ -6,12 +6,24 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartService {
 
-  constructor() { }
+  
 
-  private cartItems = new BehaviorSubject<number>(0);
-  cartItems$ = this.cartItems.asObservable();
+  // private cartItems = new BehaviorSubject<number>(0);
+  // cartItems$ = this.cartItems.asObservable();
 
-  addToCart() {
-    this.cartItems.next(this.cartItems.value + 1);
+  // addToCart() {
+  //   this.cartItems.next(this.cartItems.value + 1);
+  // }
+
+  private cartItems = new BehaviorSubject<any[]>([]);
+  currentCartItems = this.cartItems.asObservable();
+
+  constructor() {}
+
+  addToCart(item: any) {
+    const currentItems = this.cartItems.value;
+    currentItems.push(item);
+    this.cartItems.next(currentItems);
   }
+
 }

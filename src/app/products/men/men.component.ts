@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/products.service';
 import { menData } from 'src/data/men';
 @Component({
@@ -11,7 +12,7 @@ export class MenComponent {
 
   men:any[]=[];
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService, private router:Router) { }
 // private route: ActivatedRoute
   ngOnInit(): void {
     // const id = this.route.snapshot.paramMap.get('id');
@@ -22,5 +23,9 @@ export class MenComponent {
 
     this.men=this.productService.getMen()
 
+  }
+
+  viewMenwearInfo(id:string){
+    this.router.navigate(['/fashioninfo', id]);
   }
 }

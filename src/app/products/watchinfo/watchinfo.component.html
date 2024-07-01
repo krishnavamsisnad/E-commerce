@@ -47,21 +47,23 @@
     </div>
   </div>
 </nav>
-<div *ngIf="mobileData" class="mobile-detail">
-  <div class="mobile-img">
-    <img [src]="mobileData.image" alt="{{ mobileData.product }}" />
+
+<div *ngIf="watchData" class="watch-detail">
+  <div class="watch-img">
+    <img [src]="watchData.image" alt="{{ watchData.product }}" />
   </div>
   <div class="vertical-line"></div>
-  <div class="mobile-info">
-    <h2>{{ mobileData.product }}</h2>
-    <p><strong>Company:</strong> {{ mobileData.company }}</p>
-    <p><strong>Model:</strong> {{ mobileData.model }}</p>
-    <p><strong>Price:</strong> ${{ mobileData.price }}</p>
-    <p><strong>Category:</strong> {{ mobileData.category }}</p>
-    <p><strong>Description:</strong>{{ mobileData.description }}</p>
+  <div class="watch-info">
+    <h2>{{ watchData.product }}</h2>
+    <p><strong>Company:</strong> {{ watchData.brand }}</p>
+    <p><strong>Model:</strong> {{ watchData.model }}</p>
+    <p><strong>Price:</strong> ${{ watchData.price }}</p>
+    <p><strong>Category:</strong> {{ watchData.category }}</p>
+    <p><strong>Description:</strong>{{ watchData.description }}</p>
     <div class="buttons">
       <!-- <button class="btn btn-secondary">Wishlist</button> -->
-      <button class="btn btn-primary" (click)="addtoCart()">Add To Cart</button>
+      <!-- (click)="onAddToCart()" -->
+      <button class="btn btn-primary">Add To Cart</button>
       <button class="btn btn-success" (click)="buyNow()">Buy Now</button>
     </div>
   </div>

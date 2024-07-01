@@ -16,6 +16,12 @@ import { WatchComponent } from './watch/watch.component';
 import { SpeakerComponent } from './speaker/speaker.component';
 import { ProdataComponent } from './prodata/prodata.component';
 import { MobileInfoComponent } from './mobile-info/mobile-info.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ComputerinfoComponent } from './computerinfo/computerinfo.component';
+import { FurnitureinfoComponent } from './furnitureinfo/furnitureinfo.component';
+import { FashioninfoComponent } from './fashioninfo/fashioninfo.component';
+import { FashionwomaninfoComponent } from './fashionwomaninfo/fashionwomaninfo.component';
+import { WatchinfoComponent } from './watchinfo/watchinfo.component';
 
 
 @NgModule({
@@ -33,7 +39,13 @@ import { MobileInfoComponent } from './mobile-info/mobile-info.component';
     WatchComponent,
     SpeakerComponent,
     ProdataComponent,
-    MobileInfoComponent
+    MobileInfoComponent,
+    NavbarComponent,
+    ComputerinfoComponent,
+    FurnitureinfoComponent,
+    FashioninfoComponent,
+    FashionwomaninfoComponent,
+    WatchinfoComponent
   ],
   imports: [
     CommonModule,

@@ -27,6 +27,12 @@ import { BuynowComponent } from './addtocart/buynow/buynow.component';
 // import { OrdersModule } from './orders/orders.module';
 // import { MyordersComponent } from './orders/myorders/myorders.component';
 import { CartComponent } from './addtocart/cart/cart.component';
+import { NavbarComponent } from './products/navbar/navbar.component';
+import { ComputerinfoComponent } from './products/computerinfo/computerinfo.component';
+import { FurnitureinfoComponent } from './products/furnitureinfo/furnitureinfo.component';
+import { FashioninfoComponent } from './products/fashioninfo/fashioninfo.component';
+import { FashionwomaninfoComponent } from './products/fashionwomaninfo/fashionwomaninfo.component';
+import { WatchinfoComponent } from './products/watchinfo/watchinfo.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +51,13 @@ import { CartComponent } from './addtocart/cart/cart.component';
     MobileInfoComponent,
     BuynowComponent,
     // MyordersComponent,
-    CartComponent
+    CartComponent,
+    NavbarComponent,
+    ComputerinfoComponent,
+    FurnitureinfoComponent,
+    FashioninfoComponent,
+    FashionwomaninfoComponent,
+    WatchinfoComponent
 
    
    

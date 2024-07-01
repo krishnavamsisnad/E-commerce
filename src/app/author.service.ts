@@ -7,7 +7,7 @@ export class AuthorService {
 
   constructor(public http:HttpClient) { }
 
-  apiurl="http://localhost:3000/users"
+  apiurl="https://localhost:7291/api/Customers"
   getallusers(){
     return this.http.get(`${this.apiurl}`)
   }

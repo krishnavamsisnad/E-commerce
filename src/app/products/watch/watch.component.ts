@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/products.service';
 import { watchData } from 'src/data/watch'
 @Component({
@@ -11,7 +12,7 @@ export class WatchComponent {
 
   watch:any[]=[];
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService, private router:Router) { }
 // private route: ActivatedRoute
   ngOnInit(): void {
     // const id = this.route.snapshot.paramMap.get('id');
@@ -22,5 +23,8 @@ export class WatchComponent {
 
     this.watch=this.productService.getWatch()
 
+  }
+  viewWatchInfo(id:string){
+    this.router.navigate(['/watchinfo', id])
   }
 }

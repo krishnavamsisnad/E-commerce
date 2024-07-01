@@ -1,6 +1,13 @@
+<app-navbar></app-navbar>
 <h2>Watches</h2>
 <div class="product-container">
-  <div class="product-item" *ngFor="let w of watch">
+  <div
+    class="product-item"
+    *ngFor="let w of watch"
+    (click)="viewWatchInfo(w.id)"
+  >
     <img src="{{ w.image }}" />
+    <h2>{{ w.brand }}</h2>
+    <p><strong>Price:</strong> ${{ w.price }}</p>
   </div>
 </div>
