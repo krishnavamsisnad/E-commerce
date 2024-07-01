@@ -1,64 +1,117 @@
-<nav class="navbar navbar-expand-lg  bg-primary">
-    <div class="container-fluid">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-              <img class=".bg-light"  src="https://seeklogo.com/images/F/flipkart-logo-5CE68C24AF-seeklogo.com.png" alt="" width="50" height="25">
-            </a>
-          </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="nav">
-        <input class="form-control me-2"     type="search" placeholder="Search" aria-label="Search">
-      </div>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active .bg-primary" aria-current="page" href="#">Home</a>
-         
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Login
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item text-dark"   routerLink=""><b class="bi bi-person-circle">UserLogin</b></a></li>
-              <li><a class="dropdown-item text-dark" routerLink="Register">New User</a></li>
-              <li><a class="dropdown-item text-dark" href="#">Your Orders</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="nav">
-          <h4 class="bi bi-cart-fill"></h4>
-      </div>
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img
+          class=".bg-light"
+          src="https://seeklogo.com/images/F/flipkart-logo-5CE68C24AF-seeklogo.com.png"
+          alt=""
+          width="50"
+          height="25"
+        />
+      </a>
     </div>
-  </nav>
-  <div class=" card w-100 h-100">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="nav">
+      <input
+        class="form-control me-2"
+        [(ngModel)]="see"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item">
+          <a class="nav-link active .bg-primary" aria-current="page" href="#"
+            >Home</a
+          >
+        </li> -->
 
-    <div class="d-flex align-items-center justify-content-around">
-        <div>
-          <img src="https://rukminim2.flixcart.com/flap/64/64/image/22fddf3c7da4c4f4.png?q=100" alt="">
-          <h5>Mobiles</h5>
-        </div>
-        <div>
-          <img src="https://rukminim2.flixcart.com/flap/64/64/image/69c6589653afdb9a.png?q=100" alt="">
-         <h5>Electroics</h5>
-        </div>
-          <div>
-            <img src="https://rukminim2.flixcart.com/flap/64/64/image/ab7e2b022a4587dd.jpg?q=100" alt="">
-            <h5>Fashion</h5>
-          </div>
-          <div>
-            <img src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/0d75b34f7d8fbcb3.png?q=100" alt="">
-            <h5>Furniture</h5>
-          </div>
-          <div>
-            <img width="40px" height="50px" src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/y/a/o/-original-imagvpakxrhuxywz.jpeg?q=70" alt="">
-            <h5>Watches</h5>
-          </div>
-
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Login
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item text-dark" routerLink=""
+                ><b class="bi bi-person-circle">UserLogin</b></a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item text-dark" (click)="navigateToRegistrationForm()" 
+                >New User</a
+              >
+            </li>
+            <li><a class="dropdown-item text-dark" (click)="navigateToOrders()">Your Orders</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="nav">
+      <h4 class="bi bi-cart-fill" (click)="navigateToCart()"></h4>
     </div>
   </div>
+</nav>
+<div class="card w-100 h-100">
+  <div class="d-flex align-items-center justify-content-around">
+    <div (click)="viewMobiles()">
+      <img
+        src="https://rukminim2.flixcart.com/flap/64/64/image/22fddf3c7da4c4f4.png?q=100"
+        alt=""
+      />
+      <h5>Mobiles</h5>
+    </div>
+    <div (click)="viewComputer()">
+      <img
+        src="https://rukminim2.flixcart.com/flap/64/64/image/69c6589653afdb9a.png?q=100"
+        alt=""
+      />
+      <h5>Electroics</h5>
+    </div>
+    <div (click)="viewFurniture()">
+      <img
+        src="https://rukminim2.flixcart.com/flap/64/64/image/ab7e2b022a4587dd.jpg?q=100"
+        alt=""
+      />
+      <h5>Furniture</h5>
+    </div>
+    <div (click)="viewMen()">
+      <img
+        src="https://rukminim2.flixcart.com/fk-p-flap/64/64/image/0d75b34f7d8fbcb3.png?q=100"
+        alt=""
+      />
+      <h5>Fashion</h5>
+    </div>
+    <div (click)="viewWatches()">
+      <img
+        width="40px"
+        height="50px"
+        src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/y/a/o/-original-imagvpakxrhuxywz.jpeg?q=70"
+        alt=""
+      />
+      <h5>Watches</h5>
+    </div>
+  </div>
+</div>
 
 <!-- <div class="images">
   <h2>Acs</h2>
@@ -159,14 +212,10 @@
   </button>
 </div>
 
-
 <h2>Mobiles</h2>
 <div class="product-container">
-<h2>{{mobile.product}}</h2>
-  <div class="product-item" *ngFor="let m of mobile " (click)="viewMobiles()">
+  <div class="product-item" *ngFor="let m of mobile" (click)="viewMobiles()">
     <img src="{{ m.image }}" />
-    
-
   </div>
 </div>
 
@@ -184,19 +233,19 @@
   </div>
 </div>
 
-<h2>Men</h2>
+<h2>Fashion</h2>
 <div class="product-container">
   <div class="product-item" *ngFor="let m of men" (click)="viewMen()">
     <img src="{{ m.image }}" />
   </div>
 </div>
 
-<h2>Woman</h2>
+<!-- <h2>Woman</h2>
 <div class="product-container">
   <div class="product-item" *ngFor="let w of woman" (click)="viewWoman()">
     <img src="{{ w.image }}" />
   </div>
-</div>
+</div> -->
 
 <h2>Furniture</h2>
 <div class="product-container">
@@ -237,7 +286,11 @@
   </div>
 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <!-- <p>dashboard works!</p>
 <app-category></app-category> -->
 >>>>>>> a14772abf87093e77052562df6ef3dad8f9be4cc
+=======
+>>>>>>>>> Temporary merge branch 2
+>>>>>>> 6d3ef681794a685e266fe04ebea6e0c531e1f10e

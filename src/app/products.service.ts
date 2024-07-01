@@ -73,7 +73,7 @@ export class ProductsService {
     return this.womanInfo;
   }
 
-  getProductById(id: string) {
+  getMobileById(id: string) {
     return this.mobileInfo.find(mobile => mobile.id === id);
   }
 

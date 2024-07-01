@@ -1,1 +1,67 @@
-<p>MobileInfo works!</p>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" routerLink="/">MyStore</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard" style="color:white;">Dashboard</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" (click)="sortPrice('highToLow')"
+              >Price High to Low</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="sortPrice('lowToHigh')"
+              >Price Low to High</a
+            >
+          </li> -->
+        </ul>
+        <form class="d-flex" (submit)="search($event)">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            [(ngModel)]="searchQuery"
+            name="search"
+          />
+          <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
+        </form>
+        <a class="nav-link text-light" routerLink="/cart">
+          <i class="bi bi-cart"></i> Cart
+        </a>
+      </div>
+    </div>
+  </nav>
+<div *ngIf="mobileData" class="mobile-detail">
+    <div class="mobile-img">
+        <img [src]="mobileData.image" alt="{{ mobileData.product }}" />
+    </div>
+    <div class="vertical-line"></div>
+    <div class="mobile-info">
+        <h2>{{ mobileData.product }}</h2>
+        <p><strong>Company:</strong> {{ mobileData.company }}</p>
+        <p><strong>Model:</strong> {{ mobileData.model }}</p>
+        <p><strong>Price:</strong> ${{ mobileData.price }}</p>
+        <p><strong>Category:</strong> {{ mobileData.category }}</p>
+        <p><strong>Description:</strong>{{ mobileData.description }}</p>
+        <div class="buttons">
+            <!-- <button class="btn btn-secondary">Wishlist</button> -->
+            <button class="btn btn-primary" (click)="onAddToCart()">Add To Cart</button>
+            <button class="btn btn-success" (click)="buyNow()">Buy Now</button>
+        </div>
+    </div>
+</div>

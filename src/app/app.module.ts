@@ -9,8 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { CustomerModule } from './customer/customer.module';
 import { DashboardComponent } from './app/homepage/dashboard/dashboard.component';
+import { CategoryComponent } from './app/homepage/dashboard/category/category.component';
 import { AuthService } from './auth.service';
 import { ProductsService } from './products.service';
+import { SearchPipe } from './search.pipe';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { CommonModule } from '@angular/common';
 import { MobilesComponent } from './products/mobiles/mobiles.component';
@@ -20,12 +22,19 @@ import { WomanComponent } from './products/woman/woman.component';
 import { FurnitureComponent } from './products/furniture/furniture.component';
 import { ComputersComponent } from './products/computers/computers.component';
 import { MobileInfoComponent } from './products/mobile-info/mobile-info.component';
+import { CartService } from './cart.service';
+import { BuynowComponent } from './addtocart/buynow/buynow.component';
+// import { OrdersModule } from './orders/orders.module';
+// import { MyordersComponent } from './orders/myorders/myorders.component';
+import { CartComponent } from './addtocart/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     DashboardComponent,
+    CategoryComponent,
+    SearchPipe,
     ProductdetailsComponent,
     MobilesComponent,
     WatchComponent,
@@ -33,7 +42,10 @@ import { MobileInfoComponent } from './products/mobile-info/mobile-info.componen
     WomanComponent,
     FurnitureComponent,
     ComputersComponent,
-    MobileInfoComponent
+    MobileInfoComponent,
+    BuynowComponent,
+    // MyordersComponent,
+    CartComponent
 
    
    
@@ -51,12 +63,13 @@ import { MobileInfoComponent } from './products/mobile-info/mobile-info.componen
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
-    CommonModule
+    CommonModule,
+    // OrdersModule
   
   
   
   ],
-  providers: [AuthService,ProductsService],
+  providers: [AuthService,ProductsService,CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

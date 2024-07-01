@@ -46,6 +46,10 @@ export class HomepageComponent {
       this.toastr.warning('Please fill in all required fields', 'Warning');
     }
   }
+
+  navigateToDashboard(){
+    this.router.navigate(['/dashboard'])
+  }
 }
 
 

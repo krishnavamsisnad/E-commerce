@@ -10,8 +10,9 @@ import { mobileData } from 'src/data/mobiles';
 })
 export class MobilesComponent implements OnInit{
   mobileInfo=mobileData;
-
+  see=''
   mobile:any[]=[];
+  
 
   constructor(private productService: ProductsService,private router: Router) { }
 // 
@@ -20,6 +21,26 @@ export class MobilesComponent implements OnInit{
     this.mobile=this.productService.getMobile()
 
   }
+  // ...
+
+ 
+
+  sortByPriceAsc = false;
+  sortByPriceDesc = false;
+
+  sortPriceAsc() {
+    this.mobile.sort((a, b) => a.price - b.price);
+    this.sortByPriceAsc = true;
+    this.sortByPriceDesc = false;
+  }
+
+  sortPriceDesc() {
+    this.mobile.sort((a, b) => b.price - a.price);
+    this.sortByPriceAsc = false;
+    this.sortByPriceDesc = true;
+  }
+
+// ...
 
   searchQuery: string = '';
 
@@ -37,7 +58,7 @@ export class MobilesComponent implements OnInit{
     console.log('Search query:', this.searchQuery);
   }
 
-  viewMobileInfo():void{
-    this.router.navigate(['/mobileinfo'])
+  viewMobileInfo(id:string):void{
+    this.router.navigate(['/mobileinfo', id ])
   }
 }
