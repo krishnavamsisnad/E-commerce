@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CustomerRoutingModule } from './customer-routing.module';
 import { RegitersComponent } from './regiters/regiters.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +13,9 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     CommonModule,
     CustomerRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
     ToastrModule,
-
-   
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CustomerModule { }

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './app/homepage/homepage.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ToastrModule } from 'ngx-toastr';
 import { CustomerModule } from './customer/customer.module';
 import { DashboardComponent } from './app/homepage/dashboard/dashboard.component';
@@ -33,9 +33,12 @@ import { FurnitureinfoComponent } from './products/furnitureinfo/furnitureinfo.c
 import { FashioninfoComponent } from './products/fashioninfo/fashioninfo.component';
 import { FashionwomaninfoComponent } from './products/fashionwomaninfo/fashionwomaninfo.component';
 import { WatchinfoComponent } from './products/watchinfo/watchinfo.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     HomepageComponent,
     DashboardComponent,
@@ -48,10 +51,10 @@ import { WatchinfoComponent } from './products/watchinfo/watchinfo.component';
     WomanComponent,
     FurnitureComponent,
     ComputersComponent,
-    MobileInfoComponent,
+   
     BuynowComponent,
     // MyordersComponent,
-    CartComponent,
+   
     NavbarComponent,
     ComputerinfoComponent,
     FurnitureinfoComponent,
@@ -63,23 +66,25 @@ import { WatchinfoComponent } from './products/watchinfo/watchinfo.component';
    
   ],
   imports: [
+    // Angular modules
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    CustomerModule,
- 
+    CommonModule,
     FormsModule,
-    ToastrModule.forRoot({ // ToastrModule added
+    ReactiveFormsModule,
+    HttpClientModule,
+  
+    // Third-party modules
+    ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
-    CommonModule,
-    // OrdersModule
   
+    // Feature modules
+    CustomerModule,
   
-  
+    // Routing module
+    AppRoutingModule,
   ],
   providers: [AuthService,ProductsService,CartService],
   bootstrap: [AppComponent]
