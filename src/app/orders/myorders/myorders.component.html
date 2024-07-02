@@ -1,1 +1,24 @@
-<h1>Currently You do not have any orders placed</h1>
+<!-- <h1>Currently You do not have any orders placed</h1> -->
+<h2>Orders</h2>
+<ul>
+  <li *ngFor="let order of orders">
+    {{ order.name }}
+  </li>
+</ul>
+
+<div
+  class="card"
+  style="width: 18rem; margin-top: 50px; margin-left: 50px"
+  *ngFor="let order of orders"
+>
+  <img class="card-img-top" src="{{ order.image }}" alt="Card image cap" />
+  <div class="card-body">
+    <h5 class="card-title">{{ order.product }}</h5>
+    <p><strong>Model:</strong> {{ order.model }}</p>
+    <p><strong>Price:</strong> ${{ order.price }}</p>
+    <p><strong>Category:</strong> {{ order.category }}</p>
+    <p><strong>Company:</strong> {{ order.company }}</p>
+    <p class="card-text">{{ order.description }}</p>
+    <!-- <button class="btn btn-success" (click)="buyNow()">Buy Now</button> -->
+  </div>
+</div>
