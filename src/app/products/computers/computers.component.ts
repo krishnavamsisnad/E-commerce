@@ -11,6 +11,7 @@ export class ComputersComponent {
   computerInfo=computerData;
 
   computer:any[]=[];
+  computers:any;
   see="";
 
   constructor(private productService: ProductsService, private router:Router) { }
@@ -23,7 +24,14 @@ export class ComputersComponent {
     // }
 
     this.computer=this.productService.getComputer()
+    this.getComputers();
 
+  }
+
+  getComputers(){
+    this.productService.getProducts().subscribe((res)=>{
+      this.computers=res;
+    })
   }
 
   viewComputersInfo(id:string){
