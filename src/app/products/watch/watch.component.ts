@@ -11,6 +11,7 @@ export class WatchComponent {
   watchInfo=watchData;
   see=""
   watch:any[]=[];
+  watches:any;
 
   constructor(private productService: ProductsService, private router:Router) { }
 // private route: ActivatedRoute
@@ -22,7 +23,14 @@ export class WatchComponent {
     // }
 
     this.watch=this.productService.getWatch()
+    this.getWatches();
 
+  }
+
+  getWatches(){
+    this.productService.getProducts().subscribe((res)=>{
+      this.watches=res;
+    })
   }
   sortByPriceAsc = false;
   sortByPriceDesc = false;

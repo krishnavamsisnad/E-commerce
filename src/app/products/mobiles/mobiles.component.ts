@@ -12,6 +12,7 @@ export class MobilesComponent implements OnInit{
   mobileInfo=mobileData;
   see=''
   mobile:any[]=[];
+  mobiles:any;
   
 
   constructor(private productService: ProductsService,private router: Router) { }
@@ -20,8 +21,16 @@ export class MobilesComponent implements OnInit{
 
     this.mobile=this.productService.getMobile()
 
+    this.getMobiles();
+
   }
   // ...
+
+  getMobiles(){
+    this.productService.getProducts().subscribe((res)=>{
+      this.mobiles=res;
+    })
+  }
 
  
 

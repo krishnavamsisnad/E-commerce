@@ -11,6 +11,7 @@ export class WomanComponent {
   womanInfo=womanData;
 
   woman:any[]=[];
+  women:any;
 
   constructor(private productService: ProductsService, private router:Router) { }
 // private route: ActivatedRoute
@@ -22,7 +23,13 @@ export class WomanComponent {
     // }
 
     this.woman=this.productService.getWoman()
+    this.getWomen();
 
+  }
+  getWomen(){
+    this.productService.getProducts().subscribe((res)=>{
+      this.women=res;
+    })
   }
 
   viewWomanwearInfo(id:string){

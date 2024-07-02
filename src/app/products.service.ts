@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { acData } from 'src/data/ac';
 import { booksData } from 'src/data/books';
@@ -17,8 +18,9 @@ export class ProductsService {
     
   apiurl="https://localhost:7291/api/Categories";
   address="https://localhost:7291/api/Address";
+  apiProductsUrl="https://localhost:44378/api/Products";
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   private acInfo = acData;
   private bookInfo=booksData;
@@ -31,6 +33,10 @@ export class ProductsService {
   private tvInfo=tvData;
   private watchInfo=watchData;
   private womanInfo=womanData;
+
+  getProducts(){
+    return this.http.get(this.apiProductsUrl);
+  }
 
   getAc() {
     return this.acInfo;

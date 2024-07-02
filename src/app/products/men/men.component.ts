@@ -11,6 +11,7 @@ export class MenComponent {
   menInfo=menData;
     see=''
   men:any[]=[];
+  mens:any;
 
   constructor(private productService: ProductsService, private router:Router) { }
 // private route: ActivatedRoute
@@ -22,7 +23,14 @@ export class MenComponent {
     // }
 
     this.men=this.productService.getMen()
+    this.getMens();
 
+
+  }
+  getMens(){
+    this.productService.getProducts().subscribe((res)=>{
+      this.mens=res;
+    })
   }
   sortByPriceAsc = false;
   sortByPriceDesc = false;

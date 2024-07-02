@@ -11,6 +11,7 @@ export class FurnitureComponent {
   furnitureInfo=furnitureData;
   see=""
   furniture:any[]=[];
+  furnitures:any;
 
   constructor(private productService: ProductsService,private router:Router) { }
 // private route: ActivatedRoute
@@ -22,7 +23,14 @@ export class FurnitureComponent {
     // }
 
     this.furniture=this.productService.getFurniture()
+    this.getFurnitures();
 
+  }
+
+  getFurnitures(){
+    this.productService.getProducts().subscribe((res)=>{
+      this.furnitures=res;
+    })
   }
   sortByPriceAsc = false;
   sortByPriceDesc = false;
