@@ -27,12 +27,12 @@ export class RegitersComponent {
 
   signin(f: NgForm) {
     if (f.valid) {
-      this.http.post('https://localhost:7291/api/Customers', f.value).subscribe(
+      this.http.post('http://localhost:3000/singin', f.value).subscribe(
         (res) => {
           console.log(res);
           this.toastr.success('Registration successful', 'Success');
           this.router.navigateByUrl('');
-          localStorage.setItem('user', JSON.stringify(f.value));
+          localStorage.setItem('users', JSON.stringify(f.value));
         },
         (error) => {
           console.error(error);

@@ -22,12 +22,12 @@ export class HomepageComponent {
 
   login(user: NgForm) {
     if (user.valid) {
-      this.authService.getbyuser(user.value.username).subscribe(
+      this.authService.getbyuser(user.value.username && user.value.password).subscribe(
         (res: any) => {
           console.log(res);
           const login = res.find((a: any) => a.username === user.value.username && a.password === user.value.password);
           if (login) {
-            localStorage.setItem('user', JSON.stringify(login));
+            localStorage.setItem('users', JSON.stringify(login));
             console.log('Login successful');
             this.toastr.success('Login successful', 'Success');
             this.router.navigate(['/']);
@@ -47,9 +47,9 @@ export class HomepageComponent {
     }
   }
 
-  // navigateToDashboard(){
-  //   this.router.navigate(['/'])
-  // }
+  navigateToDashboard(){
+    this.router.navigate(['/'])
+  }
 }
 
 
