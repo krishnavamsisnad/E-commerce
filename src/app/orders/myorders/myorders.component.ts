@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrdersService } from 'src/app/orders.service';
 
 @Component({
   selector: 'app-myorders',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class MyordersComponent {
 
+  orders: any[] = [];
+
+  constructor(private os: OrdersService) {}
+
+  ngOnInit() {
+    this.os.getOrders().subscribe(orders => {
+      this.orders = orders;
+    });
+  }
 }

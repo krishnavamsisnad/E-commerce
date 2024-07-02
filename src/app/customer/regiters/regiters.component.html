@@ -68,6 +68,11 @@
             class="form-control"
             required
           /><br />
+          <small
+            *ngIf="phoneNumber.touched && phoneNumber.invalid"
+            class="err-msg"
+            >PhoneNumber is required</small
+          >
         </div>
         <div class="col-10">
           <label for="passWord">Password<span class="err-msg">*</span></label>
@@ -80,6 +85,9 @@
             class="form-control"
             required
           /><br />
+          <small *ngIf="passWord.touched && passWord.invalid" class="err-msg"
+            >Password is required</small
+          >
         </div>
         <div class="col-10">
           <label for="confirmPassWord"
@@ -94,6 +102,11 @@
             class="form-control"
             required
           /><br />
+          <small
+            *ngIf="confirmPassWord.touched && confirmPassWord.invalid"
+            class="err-msg"
+            >Confirm Password is required</small
+          >
         </div>
         <div>
           <button

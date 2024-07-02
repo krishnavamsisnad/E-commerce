@@ -30,7 +30,7 @@ export class HomepageComponent {
             localStorage.setItem('user', JSON.stringify(login));
             console.log('Login successful');
             this.toastr.success('Login successful', 'Success');
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/']);
           } else {
             console.log('Login failed');
             this.toastr.error('Invalid username or password', 'Error');
@@ -47,9 +47,9 @@ export class HomepageComponent {
     }
   }
 
-  navigateToDashboard(){
-    this.router.navigate(['/dashboard'])
-  }
+  // navigateToDashboard(){
+  //   this.router.navigate(['/'])
+  // }
 }
 
 
