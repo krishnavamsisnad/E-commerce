@@ -18,8 +18,8 @@ export class ProductsService {
     
   apiurl="https://localhost:7291/api/Categories";
   address="https://localhost:7291/api/Address";
-  apiProductsUrl="https://localhost:44378/api/Products";
-
+  apiProductsUrl="http://localhost:5071/api/Products";
+  
   constructor(private http:HttpClient) { }
 
   private acInfo = acData;
@@ -106,6 +106,9 @@ export class ProductsService {
 
   getWatchById(id: string) {
     return this.watchInfo.find(watch => watch.id === id);
+  }
+  getallproducts(){
+    return this.http.get(this.apiProductsUrl)
   }
 
 }

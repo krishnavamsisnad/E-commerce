@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NgForm } from '@angular/forms';
+
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-regiters',
@@ -12,7 +13,7 @@ import { NgForm } from '@angular/forms';
 export class RegitersComponent {
   user = {
     firstname: '',
-    lastname:'',
+    lastname: '',
     email: '',
     password: '',
     confirmpassword: '',
@@ -20,19 +21,18 @@ export class RegitersComponent {
   };
 
   constructor(
-    private http: HttpClient,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    public authService: AuthService
   ) {}
 
   signin(f: NgForm) {
     if (f.valid) {
-      this.http.post('http://localhost:3000/singin', f.value).subscribe(
+      this.authService.postCustomer(this.user).subscribe(
         (res) => {
           console.log(res);
           this.toastr.success('Registration successful', 'Success');
-          this.router.navigateByUrl('');
-          localStorage.setItem('users', JSON.stringify(f.value));
+          this.router.navigateByUrl('/login'); 
         },
         (error) => {
           console.error(error);
@@ -43,9 +43,4 @@ export class RegitersComponent {
       this.toastr.warning('Please fill out all fields correctly', 'Warning');
     }
   }
-
-  navigateToLogin(){
-    this.router.navigate(['/'])
-  }
 }
-

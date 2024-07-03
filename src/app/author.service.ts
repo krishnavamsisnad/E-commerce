@@ -7,10 +7,12 @@ export class AuthorService {
 
   constructor(public http:HttpClient) { }
 
-  apiurl="http://localhost:3000/users"
+  apiurl="http://localhost:5071/api/Customers"
   getallusers(){
     return this.http.get(`${this.apiurl}`)
   }
+
+  
   getbyuser(name:any){
     return this.http.get(`${this.apiurl}?username=${name}`)
   }
@@ -23,8 +25,9 @@ export class AuthorService {
   deletuser(id:any){
     return this.http.delete(`${this.apiurl}/${id}`)
   }
-  IsLogin(){
-    return localStorage.getItem('username')!=null
+  
+  login(username: string, password: string) {
+    return this.http.post(`${this.apiurl}/login`, { username, password });
   }
 }
 

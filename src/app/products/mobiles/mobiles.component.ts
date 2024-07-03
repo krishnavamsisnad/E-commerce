@@ -22,6 +22,9 @@ export class MobilesComponent implements OnInit{
     this.mobile=this.productService.getMobile()
 
     this.getMobiles();
+    this.productService.getallproducts().subscribe((res)=>{
+      console.log(res)
+    })
 
   }
   // ...

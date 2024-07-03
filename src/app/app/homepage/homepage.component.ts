@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { AuthorService } from 'src/app/author.service'; // Adjust the path as per your project structure
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-homepage',
@@ -17,19 +17,18 @@ export class HomepageComponent {
   constructor(
     private router: Router,
     private toastr: ToastrService,
-    private authService: AuthorService
+    private authService: AuthService
   ) {}
 
   login(user: NgForm) {
     if (user.valid) {
-      this.authService.getbyuser(user.value.username && user.value.password).subscribe(
+      this.authService.login(user.value.username, user.value.password).subscribe(
         (res: any) => {
-          console.log(res);
-          const login = res.find((a: any) => a.username === user.value.username && a.password === user.value.password);
-          if (login) {
-            localStorage.setItem('users', JSON.stringify(login));
+          console.log(res)
+          if (res.success) {
             console.log('Login successful');
             this.toastr.success('Login successful', 'Success');
+            localStorage.setItem('currentUser', JSON.stringify(res.customer));
             this.router.navigate(['/']);
           } else {
             console.log('Login failed');
@@ -46,10 +45,4 @@ export class HomepageComponent {
       this.toastr.warning('Please fill in all required fields', 'Warning');
     }
   }
-
-  navigateToDashboard(){
-    this.router.navigate(['/'])
-  }
 }
-
-
